@@ -1,0 +1,6 @@
+#!/bin/sh
+echo "Starting utility... \n"
+./index.php --file src/source.c --module c
+cd tests
+echo "Starting Tests... \n"
+phpunit EngineTest.php

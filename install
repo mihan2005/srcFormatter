@@ -1,0 +1,17 @@
+#!/bin/sh
+echo "Php location: "
+if which php
+then
+
+	if [ $# == 0 ]
+	then
+		echo "Command usage: ./install [path-to-install]"
+	else
+		for arg in $@ ;do
+			cp -R . $arg
+		done
+		echo "Installtion is finished succesfully!"
+	fi
+else
+	echo "Not found. You can't run utility on your machine."
+fi
